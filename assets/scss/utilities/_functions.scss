@@ -1,0 +1,11 @@
+@function img($url) {
+    $path: "../img/";
+    @return url(#{$path+$url});
+}
+
+%back-gradient{
+    background: linear-gradient(to bottom right,
+        #CB48F9,
+        #F91762
+    );
+}

@@ -1,0 +1,32 @@
+/* fonts */
+:root{
+    --main-font: 'Srisakdi';
+    --title-font: 'Lobster';
+    --second-font: cursive;
+    --font-size: 16px;
+    --font-weight: bold;
+}
+
+/* Colors */
+:root{
+    --primary-color: #F91762;
+    --secondary-color: #CB48F9;
+    --tertiary-color: #FFEC40;
+    --card-color: #5DD3FF;
+}
+
+// Heights
+$header-height: 8rem;
+
+$logo-height: 6rem;
+$logo-width: 6rem;
+
+// Breakpoints
+$breakpoints: (
+    sm: 320px,
+    md: 764px,
+    lg: 960px,
+    xl: 1200px
+);
+
+

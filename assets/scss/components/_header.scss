@@ -1,0 +1,60 @@
+.header{
+    height: $header-height;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include mq(lg) {
+        height: 14rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+.header-logo{
+    height: $logo-height;
+    width: $logo-width;
+    @include mq(lg) {
+        height: 10rem;
+        width: 10rem;
+    }
+}
+.header-toggle{
+    $color: #fff;
+    width: 2.5rem;
+    height: 2rem;
+    background: linear-gradient($color 20%,transparent 20%,transparent 40%,$color 40%,$color 60%,transparent 60%,transparent 80%,$color 80%);
+    cursor: pointer;
+    &:hover,&.toggle{
+        background: linear-gradient(var(--primary-color) 20%,transparent 20%,transparent 40%,var(--primary-color) 40%,var(--primary-color) 60%,transparent 60%,transparent 80%,var(--primary-color) 80%);
+    }
+    @include mq(900px){
+        display: none;
+    }
+}
+.header-nav{
+    position: absolute;
+    top: 100%;
+    right:-100%;
+    height: calc(100vh - 8rem);
+    width: 100%;
+    transition: all .3s ease;
+    @extend %back-gradient;
+    &.show-nav{
+        right: 0;
+    }
+    @include mq(900px){
+        position: static;
+        height: auto;
+        width: auto;
+        background: transparent;
+    }
+}

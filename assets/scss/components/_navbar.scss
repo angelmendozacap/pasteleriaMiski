@@ -1,0 +1,37 @@
+.nav{
+    display: block;
+    height: 100%;
+    @include mq(900px) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+.nav-item{
+    padding-top: 2rem;
+    padding-bottom: .6rem;
+    border-bottom: 3px solid transparent;
+    transition: all .3s ease;
+    &:hover{
+        @include mq(900px) {
+            border-bottom-color: var(--primary-color);
+        }
+    }
+    @include mq(900px) {
+        padding-top: 0;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    &__link{
+        text-align: center;
+        font-size: 2.2rem;
+        color: #fff;
+        transition: all .3s ease;
+        @include mq(900px) {
+            font-size: 1.5rem;
+        }
+    }
+    &:hover &__link{
+        color: var(--primary-color);
+    }
+}

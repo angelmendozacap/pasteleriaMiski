@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--main-font), var(--second-font);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    background: img("backgrounds/united-squares.png");
+    overflow-x: hidden;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
