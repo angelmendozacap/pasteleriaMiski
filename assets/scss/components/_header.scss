@@ -1,11 +1,11 @@
 .header{
     height: $header-height;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
-    position: relative;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    transition: all ease .5s;
     @include mq(lg) {
         height: 14rem;
         padding-top: 2rem;
@@ -17,6 +17,9 @@
         align-items: center;
         padding-left: .5rem;
         padding-right: .5rem;
+    }
+    &.back{
+        background: rgba(#CB48F9,.3);
     }
 }
 .header-logo{

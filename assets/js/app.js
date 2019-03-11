@@ -1,11 +1,24 @@
 ;
-((d,c) => {
+((d,c,w) => {
     const toggle = d.getElementById('toggle'),
-        navbar = d.getElementById('navbar')
+        navbar = d.getElementById('navbar'),
+        header = d.getElementById('header')
     
     toggle.addEventListener('click' , e => {
         toggle.classList.toggle('toggle')
         navbar.classList.toggle('show-nav')
+    })
+    navbar.addEventListener('click', e => {
+        if (e.target.matches('a[href*="#"]')) {
+            navbar.classList.remove('show-nav')
+        }
+    })
+    w.addEventListener('scroll', () => {
+        if (pageYOffset > 300) {
+            header.classList.add('back')
+        } else {
+            header.classList.remove('back')
+        }
     })
     /*
     const loadItems = async () => {
@@ -15,4 +28,4 @@
     }
     loadItems()
     */
-})(document,console.log)
+})(document,console.log,window)

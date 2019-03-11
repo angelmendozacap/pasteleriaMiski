@@ -1,6 +1,5 @@
 .banner{
     min-height: 100vh;
-    margin-top: -$header-height;
     width: 100%;
     background: linear-gradient(to bottom right,
         rgba(#CB48F9,.25),
@@ -11,9 +10,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include mq(lg) {
-        margin-top: -14rem;
-    }
 }
 .banner-logo{
     padding: 1rem;
