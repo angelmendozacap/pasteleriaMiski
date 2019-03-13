@@ -1,3 +1,8 @@
+<?php
+define('PATH_IMGS', './pictures/');
+define('PATH_ASSETS', './assets/');
+
+?>
 <!DOCTYPE html>
 <html lang="es-PE">
 
@@ -5,20 +10,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Panadería y Pastelería Misk´i; ofrecemos la elaboración tortas, pasteles, bocaditos para todo tipo de eventos (matrimonios, cumpleaños, bautizos, etc.).">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Srisakdi:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="shortcut icon" href="./assets/img/logo/miski_logo.png">
+    <link rel="stylesheet" href="<?php echo PATH_ASSETS; ?>css/styles.css">
+    <link rel="shortcut icon" href="<?php echo PATH_ASSETS; ?>img/logo/miski_logo.png">
     <title>Pastelería Misk'i</title>
 </head>
 
 <body>
+    <!-- HEADER NAV -->
     <header id="header" class="header">
         <div class="u-container">
             <div class="header-container">
                 <div class="header-logo">
                     <a href="#">
-                        <img src="./assets/img/logo/miski_logo.png" alt="Logo Misk'i">
+                        <img src="<?php echo PATH_ASSETS; ?>img/logo/miski_logo.png" alt="Logo Misk'i">
                     </a>
                 </div>
                 <div id="toggle" class="header-toggle"></div>
@@ -31,7 +38,7 @@
                             <a class="nav-item__link" href="#nosotros">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item__link" href="">Galería</a>
+                            <a class="nav-item__link" href="#galeria">Galería</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-item__link" href="">Contacto</a>
@@ -41,6 +48,7 @@
             </div>
         </div>
     </header>
+    <!-- BANNER -->
     <section id="welcome" class="banner">
         <div class="banner-logo">
             <div class="banner-logo__subtitle">
@@ -54,25 +62,75 @@
             </div>
         </div>
     </section>
+    <!-- SECCIÓN NOSOTROS -->
     <section id="nosotros" class="about u-center">
         <div class="u-container">
             <div class="about-container">
                 <div class="about-container__description">
                     <h2>Nosotros</h2>
                     <p>
-                        En Misk´i ofrecemos la elaboración tortas, pasteles, bocaditos para todo tipo de eventos (matrimonios, cumpleaños, bautizos, etc.).
+                        En <b>Misk´i</b> ofrecemos la elaboración tortas, pasteles, bocaditos para todo tipo de eventos (matrimonios, cumpleaños, bautizos, etc.).
                     </p>
                     <p>
-                        <em>Pero más que eso hacemos que esos momentos dulces se conviertan en recuerdos inolvidables</em>.
+                        <em>
+                            <blockquote>Pero más que eso hacemos que esos momentos dulces se conviertan en recuerdos inolvidables.</blockquote>
+                        </em>
                     </p>
                 </div>
                 <div class="about-container__image">
-                    <img src="./assets/img/backgrounds/aboutUs.jpg" alt="">
+                    <img src="<?php echo PATH_ASSETS; ?>img/backgrounds/aboutUs.jpg" alt="">
                 </div>
             </div>
         </div>
     </section>
-    <script src="./assets/js/app.js"></script>
+    <!-- SECCIÓN GALERÍA -->
+    <section id="galeria" class="gallery u-center">
+        <div class="u-container">
+            <div class="gallery-container">
+                <div class="gallery-container__photos">
+                    <div class="photos">
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-container__description">
+                    <h2>Galería</h2>
+                    <p>
+                        Fotos de trabajos realizados y dejaron satisfechos a nuestros clientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="<?php echo PATH_ASSETS; ?>js/app.js"></script>
 </body>
 
 </html> 
