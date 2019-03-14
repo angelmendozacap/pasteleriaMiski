@@ -11,6 +11,7 @@
     navbar.addEventListener('click', e => {
         if (e.target.matches('a[href*="#"]')) {
             navbar.classList.remove('show-nav')
+            toggle.classList.remove('toggle')
         }
     })
     w.addEventListener('scroll', () => {

@@ -1,0 +1,110 @@
+.footer{
+    background: img('backgrounds/escheresque_ste.png');
+    padding-top: 2.5rem;
+    @include mq(lg) {
+        padding-top: 7rem;
+    }
+    &-container{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include mq(md) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: repeat(2,1fr);
+            grid-template-areas: 'contact logo' 'social logo';
+            grid-row-gap: 1.5rem;
+            grid-column-gap: 6rem;
+            align-items: center;
+        }
+    }
+    &-contact{
+        width: 100%;
+        @include mq(md) {
+            grid-area: contact;
+        }
+        p:not(:last-child){
+            margin-bottom: 1rem;
+        }
+        p{
+            display: grid;
+            grid-template-columns: 2rem 1fr;
+            grid-gap: .8rem;
+            align-items: center;
+            @include mq(md) {
+                grid-gap: 1rem;
+            }
+            @include mq(lg) {
+                grid-gap: 2rem;
+            }
+        }
+        span{
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            @include mq(md) {
+                font-size: 2rem;
+            }
+        }
+        a{
+            color: #fff;
+            text-decoration: underline;
+            font-size: 1.3rem;
+            transition: all .3s ease-out;
+            @include mq(md) {
+                font-size: 2rem;
+            }
+            &:hover{
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+        }
+    }
+    &-social{
+        width: 100%;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 1rem;
+        @include mq(md) {
+            margin-bottom: 0;
+            grid-area: social;
+        }
+        a{
+            color: var(--primary-color);
+            font-size: 2.7rem;
+            font-weight: lighter;
+            transition: all .5s ease;
+            @include mq(md) {
+                font-size: 3.5rem;
+            }
+            @include mq(lg) {
+                font-size: 5rem;
+            }
+        }
+        a:hover{
+            transform: rotateY(360deg);
+        }
+    }
+    &-logo{
+        margin-bottom: 1.8rem;
+        @include mq(md) {
+            margin-bottom: 0;
+            grid-area: logo;
+        }
+    }
+    &-rights{
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background: #181818;
+        color: #fff;
+        @include mq(lg) {
+            margin-top: 5rem;
+        }
+        small{
+            display: block;
+            text-align: center;
+        }
+    }
+}

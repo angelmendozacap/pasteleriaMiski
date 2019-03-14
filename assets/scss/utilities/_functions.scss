@@ -15,3 +15,14 @@
     rgba(#CB48F9,.8)
     );
 }
+%section{
+    @extend %back-gradient__op;
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+}
+%section-titles{
+    font-size: 3rem;
+    font-family: var(--subtitle-font), var(--second-font);
+    font-weight: 400;
+}
