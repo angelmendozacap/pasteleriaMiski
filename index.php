@@ -48,6 +48,7 @@ define('PATH_ASSETS', './assets/');
             </div>
         </div>
     </header>
+<<<<<<< HEAD
     <main>
         <!-- BANNER -->
         <section id="welcome" class="banner">
@@ -61,6 +62,16 @@ define('PATH_ASSETS', './assets/');
                 <div class="banner-logo__owner">
                     <h2>D' Jessybens</h2>
                 </div>
+=======
+    <!-- BANNER -->
+    <section id="welcome" class="banner">
+        <div class="banner-logo">
+            <div class="banner-logo__subtitle">
+                <p>Pastelería y Panadería</p>
+            </div>
+            <div class="banner-logo__title">
+                <h1>Misk'i</h1>
+>>>>>>> cb5cd56
             </div>
         </section>
         <!-- SECCIÓN NOSOTROS -->
@@ -83,6 +94,7 @@ define('PATH_ASSETS', './assets/');
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
         </section>
         <!-- SECCIÓN GALERÍA -->
         <section id="galeria" class="gallery u-center">
@@ -168,6 +180,78 @@ define('PATH_ASSETS', './assets/');
             <small>&copy; Todos los derechos reservados. Misk'i <?php echo date('Y'); ?></small>
         </div>
     </footer>
+=======
+        </div>
+    </section>
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="about u-center">
+        <div class="u-container">
+            <div class="about-container">
+                <div class="about-container__description">
+                    <h2>Nosotros</h2>
+                    <p>
+                        En <b>Misk´i</b> ofrecemos la elaboración tortas, pasteles, bocaditos para todo tipo de eventos (matrimonios, cumpleaños, bautizos, etc.).
+                    </p>
+                    <p>
+                        <em>
+                            <blockquote>Pero más que eso hacemos que esos momentos dulces se conviertan en recuerdos inolvidables.</blockquote>
+                        </em>
+                    </p>
+                </div>
+                <div class="about-container__image">
+                    <img src="<?php echo PATH_ASSETS; ?>img/backgrounds/aboutUs.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCIÓN GALERÍA -->
+    <section id="galeria" class="gallery u-center">
+        <div class="u-container">
+            <div class="gallery-container">
+                <div class="gallery-container__photos">
+                    <div class="photos">
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                        <div class="photos_card">
+                            <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
+                            <h3>Torta de Fresa</h3>
+                            <p>Torta hecha en fresa</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-container__description">
+                    <h2>Galería</h2>
+                    <p>
+                        Fotos de trabajos realizados y dejaron satisfechos a nuestros clientes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+>>>>>>> cb5cd56
     <script src="<?php echo PATH_ASSETS; ?>js/app.js"></script>
 </body>
 
