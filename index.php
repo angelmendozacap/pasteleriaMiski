@@ -11,11 +11,11 @@ define('PATH_ASSETS', './assets/');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Panadería y Pastelería Misk´i; ofrecemos la elaboración tortas, pasteles, bocaditos para todo tipo de eventos (matrimonios, cumpleaños, bautizos, etc.).">
+    <title>Pastelería Misk'i</title>
+    <link rel="shortcut icon" href="<?php echo PATH_ASSETS; ?>img/logo/miski_logo.png">
     <link href="https://fonts.googleapis.com/css?family=Lobster|Pacifico|Srisakdi:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo PATH_ASSETS; ?>css/styles.css">
-    <link rel="shortcut icon" href="<?php echo PATH_ASSETS; ?>img/logo/miski_logo.png">
-    <title>Pastelería Misk'i</title>
 </head>
 
 <body>
@@ -32,16 +32,16 @@ define('PATH_ASSETS', './assets/');
                 <nav id="navbar" class="header-nav">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-item__link" href="#welcome">Bienvenido</a>
+                            <a class="nav-item__link" data-scroll href="#welcome">Bienvenido</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item__link" href="#nosotros">Nosotros</a>
+                            <a class="nav-item__link" data-scroll href="#nosotros">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item__link" href="#galeria">Galería</a>
+                            <a class="nav-item__link" data-scroll href="#galeria">Galería</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-item__link" href="#contacto">Contacto</a>
+                            <a class="nav-item__link" data-scroll href="#contacto">Contacto</a>
                         </li>
                     </ul>
                 </nav>
@@ -89,37 +89,7 @@ define('PATH_ASSETS', './assets/');
             <div class="u-container">
                 <div class="gallery-container">
                     <div class="gallery-container__photos">
-                        <div class="photos">
-                            <div class="photos_card">
-                                <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
-                                <h3>Torta de Fresa</h3>
-                                <p>Torta hecha en fresa</p>
-                            </div>
-                            <div class="photos_card">
-                                <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
-                                <h3>Torta de Fresa</h3>
-                                <p>Torta hecha en fresa</p>
-                            </div>
-                            <div class="photos_card">
-                                <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
-                                <h3>Torta de Fresa</h3>
-                                <p>Torta hecha en fresa</p>
-                            </div>
-                            <div class="photos_card">
-                                <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
-                                <h3>Torta de Fresa</h3>
-                                <p>Torta hecha en fresa</p>
-                            </div>
-                            <div class="photos_card">
-                                <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
-                                <h3>Torta de Fresa</h3>
-                                <p>Torta hecha en fresa</p>
-                            </div>
-                            <div class="photos_card">
-                                <img src="<?php echo PATH_IMGS; ?>cakeExample.jpg" alt="Torta de Fresa">
-                                <h3>Torta de Fresa</h3>
-                                <p>Torta hecha en fresa</p>
-                            </div>
+                        <div id="Photos" class="photos">
                         </div>
                     </div>
                     <div class="gallery-container__description">
@@ -169,6 +139,13 @@ define('PATH_ASSETS', './assets/');
         </div>
     </footer>
     <script src="<?php echo PATH_ASSETS; ?>js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+        let scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            speedAsDuration: true
+        });
+    </script>
 </body>
 
 </html> 

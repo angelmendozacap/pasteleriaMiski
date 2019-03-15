@@ -65,13 +65,13 @@
         overflow: hidden;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 2rem 4rem;
-        grid-gap: .5rem;
+        grid-template-rows: 250px 6rem;
         @include mq(md) {
             overflow: initial;
         }
         img{
             object-fit: cover;
+            height: 100%; 
         }
         h3,p{
             text-align: center;
@@ -86,11 +86,6 @@
             @include mq(sm) {
                 font-size: 1.7rem;
             }
-        }
-        p{
-            font-size: 1rem;
-            padding-left: .5rem;
-            padding-right: .5rem;
         }
     }
 }

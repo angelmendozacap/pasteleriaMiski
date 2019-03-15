@@ -15,8 +15,11 @@
             grid-template-areas: repeat(2,1fr);
             grid-template-areas: 'contact logo' 'social logo';
             grid-row-gap: 1.5rem;
-            grid-column-gap: 6rem;
+            grid-column-gap: 1.5rem;
             align-items: center;
+        }
+        @include mq(lg) {
+            grid-column-gap: 6rem;
         }
     }
     &-contact{
@@ -43,7 +46,10 @@
             color: var(--primary-color);
             font-size: 1.3rem;
             @include mq(md) {
-                font-size: 2rem;
+                font-size: 1.4rem;
+            }
+            @include mq(lg) {
+                font-size: 1.8rem;
             }
         }
         a{
@@ -52,7 +58,10 @@
             font-size: 1.3rem;
             transition: all .3s ease-out;
             @include mq(md) {
-                font-size: 2rem;
+                font-size: 1.4rem;
+            }
+            @include mq(lg) {
+                font-size: 1.8rem;
             }
             &:hover{
                 text-decoration: none;

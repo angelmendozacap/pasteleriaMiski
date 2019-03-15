@@ -21,9 +21,13 @@ class Images extends DB
         $response = $this->db_query($query,null,true);
         return $response;
     }
-    public function addImage($data)
+    public function addImage()
     {
         $query = "INSERT INTO {$this->table} (image,name) VALUES (?, ?)";
+        $data = [
+            $this->image,
+            $this->name
+        ];
         $response = $this->db_query($query, $data);
         return $response;
     }

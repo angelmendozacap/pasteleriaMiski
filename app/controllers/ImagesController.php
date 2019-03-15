@@ -2,6 +2,8 @@
 
 class ImagesController extends Images
 {
+    public $err;
+    public $success;
     public function obtenerImagenes() {
         $respuesta = $this->getAllImages();
         if (!empty($respuesta)) {
@@ -20,23 +22,49 @@ class ImagesController extends Images
         header("Content-type: application/json");
         return json_encode($json,JSON_UNESCAPED_UNICODE);
     }
-    public function crearImagen($data)
+    public function guardarImagen($title)
     {
-        return $data;
-        /*if (!empty($data)) {
-            $respuesta = $this->addImage($data);
-            if ($respuesta) {
-                $json = $this->statusMsg("Petición correcta se creo un nuevo recurso",201,false);
+        $title = ValidarCampo($title);
+        $this->setImage('name',$title);
+        $respuesta = $this->addImage();
+        if ($respuesta) {
+            $this->success = $this->statusMsg('Archivo subido con éxito',201);
+            return $respuesta;
+        } else {
+            $this->err = $this->statusMsg('Hubo un problema al subir el archivo',500);
+            return $respuesta;
+        }
+    }
+    public function subirImagen($image)
+    {
+        $directorio = "pictures/";
+
+        $this->setImage('image',basename($image['name']));
+
+        $archivo = $directorio.$this->getImage('image');
+
+        $tipo_archivo = strtolower(pathinfo($archivo, PATHINFO_EXTENSION));
+
+        $es_imagen = getimagesize($image['tmp_name']);
+
+        if ($es_imagen) {
+            if ($tipo_archivo == 'jpg' || $tipo_archivo == 'jpeg' || $tipo_archivo == 'png') {
+                if (move_uploaded_file($image['tmp_name'],$archivo)) {
+                    return true;
+                } else {
+                    $this->err = $this->statusMsg('Hubo un problema al subir el archivo',500);
+                    return false;
+                }
             } else {
-                $json = $this->statusMsg("Error de servidor",500,false);
+                $this->err = $this->statusMsg('Solo se permite imagenes jpg, jpeg y png',400);
+                return false;
             }
         } else {
-            $json = $this->statusMsg("Error de petición",400,false);
+            $this->err = $this->statusMsg('El archivo no es una imagen',400);
+            return false;
         }
-        header("Content-type: application/json");
-        return json_encode($json,JSON_UNESCAPED_UNICODE);*/
     }
-    private function statusMsg($msg,$code,$is_request=false)
+    public function statusMsg($msg,$code,$is_request=false)
     {
         return $is_request ? ["message"=> $msg, "code" => $code, "items" => array()] : ["message"=> $msg,"code" => $code];
     }
